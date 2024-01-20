@@ -15,8 +15,8 @@ scene.add(mesh)
 
 // Sizes
 const sizes = {
-    width: 800,
-    height: 600
+	width: 800,
+	height: 600
 }
 
 // Camera
@@ -26,7 +26,7 @@ scene.add(camera)
 
 // Renderer
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas
+	canvas: canvas
 })
 renderer.setSize(sizes.width, sizes.height)
 
@@ -38,18 +38,18 @@ gsap.to(mesh.position, { duration: 1, delay: 1, x: 2 })
 gsap.to(mesh.position, { duration: 1, delay: 2, x: 0 })
 
 const tick = () => {
-    // // Using time to animate, otherwise it would change based on frame rates
-    // const elapsedTime = clock.getElapsedTime()
+	// // Using time to animate, otherwise it would change based on frame rates
+	// const elapsedTime = clock.getElapsedTime()
 
-    // // Update objects
-    // camera.position.y = Math.sin(elapsedTime)
-    // camera.position.x = Math.cos(elapsedTime)
-    // camera.lookAt(mesh.position)
+	// // Update objects
+	// camera.position.y = Math.sin(elapsedTime)
+	// camera.position.x = Math.cos(elapsedTime)
+	// camera.lookAt(mesh.position)
 
-    // // Render
-    renderer.render(scene, camera)
+	// // Render
+	renderer.render(scene, camera)
 
-    window.requestAnimationFrame(tick)
+	window.requestAnimationFrame(tick)
 }
 
 tick()
