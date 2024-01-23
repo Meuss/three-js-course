@@ -21,7 +21,7 @@ const scene = new THREE.Scene()
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
-const matcapTexture = textureLoader.load('textures/matcaps/8.png')
+const matcapTexture = textureLoader.load('textures/matcaps/3.png')
 matcapTexture.colorSpace = THREE.SRGBColorSpace
 
 /**
@@ -93,9 +93,9 @@ window.addEventListener('resize', () => {
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.x = 1
-camera.position.y = 1
+const camera = new THREE.PerspectiveCamera(85, sizes.width / sizes.height, 0.1, 100)
+camera.position.x = 0.6
+camera.position.y = 0.6
 camera.position.z = 2
 scene.add(camera)
 
